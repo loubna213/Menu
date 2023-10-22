@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .main-title {
+    position: relative;
+    text-transform: capitalize;
+    color: rgb(12, 12, 48);
+    font-size: 2em;
+    border-radius: 6px;
+    padding: 0.3em 0.5em;
+}
+.container .main-title::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: goldenrod;
+}
+.container .category .btn {
+    padding: 0.3em;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    text-transform: capitalize;
+    font-size: 1em;
+    border-radius: 6px;
+    padding: 0.3em 0.5em;
+    margin: 2em 0.5em;
+    cursor: pointer;
+    transition: .3s;
+}
+.container .category .active {
+    color: #fff;
+    background-color: goldenrod;
+}
+.container .category .btn:hover {
+    color: #fff;
+    background-color: goldenrod;
+}
+.container .menu {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    column-gap: 1em;
+    row-gap: 2.5em;
+}
+.container .menu .meal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 570px;
+}
+.container .menu .meal .info {
+    padding-left: 1em;
+}
+.container .menu .meal .info .up {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 0 0.5em;
+    margin-bottom: 1.3em;
+    border-bottom: 1px solid #000;
+}
+.container .meal .up .title {
+    font-size: 1.05em;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+.container .meal .up .price {
+    font-size: 1.05em;
+    letter-spacing: 3px;
+    color: goldenrod;
+}
+.container .meal .description {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #777;
+}
+.container .menu .meal .image img {
+    width: 230px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid goldenrod;
+}
