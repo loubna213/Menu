@@ -63,7 +63,9 @@ const menuList = [
         desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     }
 ];
+
 let menuHtml = '';
+
 window.addEventListener('DOMContentLoaded', () => {
     for(let i = 0; i < menuList.length; i++) {
         menuHtml += `
